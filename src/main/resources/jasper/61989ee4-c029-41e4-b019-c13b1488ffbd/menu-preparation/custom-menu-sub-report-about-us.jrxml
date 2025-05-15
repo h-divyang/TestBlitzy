@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="custom-menu-sub-report-about-us" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="46202714-6862-485b-8007-e0186fb20c26">
+	<parameter name="CONTACT_DETAILS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NATURE_OF_EVENT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="HOST" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NOTES" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FUNCTION_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PERSON" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="EVENT_DATE_VALUE" class="java.time.LocalDate" isForPrompting="false"/>
+	<parameter name="PAGE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="OF" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="VENUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TERMS_AND_CONDITIONS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TERMS_AND_CONDITION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="EVENT_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CUSTOMER_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CUSTOMER_NUMBER_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="VENUE_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MENU_WITH_SLOGAN_DESIGN" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NOTES_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DECIMAL_LIMIT_FOR_CURRENCY" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_TIME_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TIME_ZONE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_ADDRESS_VALUE" class="java.lang.String"/>
+	<parameter name="COMPANY_MOBILE_NUMBER_VALUE" class="java.lang.String"/>
+	<parameter name="RATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_1_PATH" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_1_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_4_PATH" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_4_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="BACKGROUND_IMAGE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="REPORT_DATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="REPORT_PERSON" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="REPORT_RUPPES" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="REPORT_SPOON" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="REPORT_BACKGROUND_LINE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ABOUT_US" class="java.lang.String"/>
+	<parameter name="ABOUT_US_HEADING" class="java.lang.String"/>
+	<parameter name="RUPEES_SYMBOL" class="java.lang.String"/>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<pageHeader>
+		<band height="209" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="-18" y="0" width="568" height="34" uuid="d0595a19-a726-4f91-a096-1eb1b9b80cc3">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="html">
+					<font fontName="Arial Unicode MS" size="11" isBold="false"/>
+					<paragraph leftIndent="30"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ABOUT_US} !=null && !$P{ABOUT_US}.equalsIgnoreCase( "" )  ? $P{ABOUT_US} : ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageFooter>
+</jasperReport>

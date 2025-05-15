@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="catalogue-report" columnCount="3" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="185" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fe78943d-0831-4e34-98cd-35fa3d601cdc">
+	<parameter name="PAGE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="OF" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="GENERAL_REPORT_BACKGROUND_IMAGE" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="menuItemCategory" class="java.lang.String"/>
+	<field name="menuItemName" class="java.lang.String"/>
+	<group name="Finish Category" isStartNewPage="true" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{menuItemCategory}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<textField>
+					<reportElement positionType="Float" mode="Opaque" x="0" y="0" width="595" height="50" forecolor="#FFFFFF" backcolor="#FF9F05" uuid="4b6a4385-882f-486d-b880-46a7557dc8b7">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS" size="18" isBold="false"/>
+						<paragraph leftIndent="20"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{menuItemCategory}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band height="842" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="595" height="842" uuid="7a14507b-b25d-4d29-8a0e-f15b67b1d2fb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{GENERAL_REPORT_BACKGROUND_IMAGE}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<pageHeader>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="25">
+			<textField>
+				<reportElement positionType="Float" x="20" y="0" width="185" height="25" forecolor="#000000" uuid="bba94e85-c4fd-4a92-8eb0-6325441ec727">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Unicode MS" size="12" isBold="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{menuItemName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="38" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="200" y="0" width="110" height="18" uuid="2ae643f2-f010-4b0c-b7d3-deda56fd4197"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PAGE}+ " "+$V{PAGE_NUMBER}+ " "+$P{OF}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="310" y="0" width="30" height="18" uuid="1e4f8b80-0343-4593-a8f9-00905c549b15"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

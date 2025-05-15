@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="menu-with-image-1-sub-report" pageWidth="555" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="99e89f9c-003e-4047-be5b-c5c00a71d50e">
+	<parameter name="PERSON" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_TIME_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TIME_ZONE" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="functionName" class="java.lang.String"/>
+	<field name="date" class="java.time.LocalDateTime"/>
+	<field name="person" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="555" height="30" forecolor="#000000" uuid="6e59a2b8-7d80-4a00-8fbb-580adb03ac1f"/>
+				<box topPadding="2" leftPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
+					<font fontName="Arial Unicode MS" size="12" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{functionName} + " ("+$F{person} +" "+ $P{PERSON}+") "+java.time.format.DateTimeFormatter.ofPattern($P{DATE_TIME_FORMAT}, Locale.ENGLISH).format($F{date}.atZone(java.time.ZoneId.systemDefault()).withZoneSameInstant(java.time.ZoneId.of($P{TIME_ZONE})).toLocalDateTime())]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

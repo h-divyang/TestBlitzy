@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="manager-working-report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="25" bottomMargin="10" uuid="6edd1162-738e-424c-ba1e-7f59a654c160">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="fe2.jrdax"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="HALL_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="INSTRUCTIONS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MEAL_TYPE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PERSON" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SENTENCE_2" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SENTENCE_1" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SIGN" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PAGE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CUSTOMER_MOBILE_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="OF" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="REMARKS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="EVENT_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CUSTOMER_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="EVENT_DATE_VALUE" class="java.time.LocalDate" isForPrompting="false"/>
+	<parameter name="CUSTOMER_HOME_ADDRESS_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MEAL_TYPE_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NOTES_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="HALL_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ON" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SENTENCE_3" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="VENUE_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_TIME_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TIME_ZONE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FUNCTION_ADDRESS" class="java.lang.String"/>
+	<parameter name="LANG_CODE" class="java.lang.String"/>
+	<parameter name="FUNCTION_NOTE" class="java.lang.String"/>
+	<parameter name="RUPEES_SYMBOL" class="java.lang.String"/>
+	<parameter name="FUNCTION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_1_PATH" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_1_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="DATE_AND_TIME" class="java.lang.String"/>
+	<parameter name="ADDRESS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CUSTOMER_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="NATURE_OF_EVENT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="EVENT_DATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TIME_FORMAT" class="java.lang.String"/>
+	<parameter name="MOBILE_NO" class="java.lang.String"/>
+	<parameter name="TIME" class="java.lang.String"/>
+	<parameter name="DATE" class="java.lang.String"/>
+	<parameter name="TITLE" class="java.lang.String"/>
+	<parameter name="CHEF_NAME" class="java.lang.String"/>
+	<parameter name="CHEF_NAME_VALUE" class="java.lang.String"/>
+	<parameter name="COMPANY_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_ADDRESS_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_MOBILE_NUMBER_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MOBILE_NUMBER" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CHEF_LABOUR" class="java.lang.String"/>
+	<parameter name="OUTSIDE_LABOUR" class="java.lang.String"/>
+	<parameter name="START_DATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="START_TIME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="END_DATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="END_TIME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="VENUE_NAME" class="java.lang.String"/>
+	<parameter name="REPORT_CALL" class="java.lang.String"/>
+	<parameter name="REPORT_WHATSAPP" class="java.lang.String"/>
+	<parameter name="REPORT_ADDRESS" class="java.lang.String"/>
+	<parameter name="COMPANY_USER_NAME" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="functionName" class="java.lang.String"/>
+	<field name="person" class="java.lang.Long"/>
+	<field name="date" class="java.time.LocalDateTime"/>
+	<field name="menuItemCategory" class="java.lang.String"/>
+	<field name="menuItem" class="java.lang.String"/>
+	<field name="functionId" class="java.lang.Long"/>
+	<field name="functionAddress" class="java.lang.String"/>
+	<field name="functionNote" class="java.lang.String"/>
+	<group name="Function_Group">
+		<groupHeader>
+			<band height="19">
+				<subreport>
+					<reportElement x="-18" y="0" width="570" height="19" uuid="0c74cb20-6bee-46b1-bd9f-67b9ecaa8f27"/>
+					<subreportParameter name="HALL_NAME">
+						<subreportParameterExpression><![CDATA[$P{HALL_NAME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="INSTRUCTIONS">
+						<subreportParameterExpression><![CDATA[$P{INSTRUCTIONS}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="MEAL_TYPE">
+						<subreportParameterExpression><![CDATA[$P{MEAL_TYPE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="PERSON">
+						<subreportParameterExpression><![CDATA[$P{PERSON}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SENTENCE_2">
+						<subreportParameterExpression><![CDATA[$P{SENTENCE_2}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SENTENCE_1">
+						<subreportParameterExpression><![CDATA[$P{SENTENCE_1}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SIGN">
+						<subreportParameterExpression><![CDATA[$P{SIGN}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="PAGE">
+						<subreportParameterExpression><![CDATA[$P{PAGE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CUSTOMER_NUMBER_VALUE">
+						<subreportParameterExpression><![CDATA[$P{CUSTOMER_MOBILE_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="OF">
+						<subreportParameterExpression><![CDATA[$P{OF}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="REMARKS">
+						<subreportParameterExpression><![CDATA[$P{REMARKS}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="EVENT_NAME_VALUE">
+						<subreportParameterExpression><![CDATA[$P{EVENT_NAME_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CUSTOMER_NAME_VALUE">
+						<subreportParameterExpression><![CDATA[$P{CUSTOMER_NAME_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="EVENT_DATE_VALUE">
+						<subreportParameterExpression><![CDATA[$P{EVENT_DATE_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CUSTOMER_HOME_ADDRESS_VALUE">
+						<subreportParameterExpression><![CDATA[$P{CUSTOMER_HOME_ADDRESS_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="MEAL_TYPE_NAME_VALUE">
+						<subreportParameterExpression><![CDATA[$P{MEAL_TYPE_NAME_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NOTES_VALUE">
+						<subreportParameterExpression><![CDATA[$P{NOTES_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="HALL_NAME_VALUE">
+						<subreportParameterExpression><![CDATA[$P{HALL_NAME_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ON">
+						<subreportParameterExpression><![CDATA[$P{ON}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SENTENCE_3">
+						<subreportParameterExpression><![CDATA[$P{SENTENCE_3}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="VENUE_VALUE">
+						<subreportParameterExpression><![CDATA[$P{VENUE_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DATE_FORMAT">
+						<subreportParameterExpression><![CDATA[$P{DATE_FORMAT}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DATE_TIME_FORMAT">
+						<subreportParameterExpression><![CDATA[$P{DATE_TIME_FORMAT}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TIME_ZONE">
+						<subreportParameterExpression><![CDATA[$P{TIME_ZONE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="FUNCTION_ADDRESS">
+						<subreportParameterExpression><![CDATA[$P{FUNCTION_ADDRESS}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="LANG_CODE">
+						<subreportParameterExpression><![CDATA[$P{LANG_CODE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="FUNCTION_NOTE">
+						<subreportParameterExpression><![CDATA[$P{FUNCTION_NOTE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="RUPEES_SYMBOL">
+						<subreportParameterExpression><![CDATA[$P{RUPEES_SYMBOL}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="FUNCTION">
+						<subreportParameterExpression><![CDATA[$P{FUNCTION}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SUB_REPORT_1_PATH">
+						<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_PATH}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="SUB_REPORT_1_DATASOURCE">
+						<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_DATASOURCE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DATE_AND_TIME">
+						<subreportParameterExpression><![CDATA[$P{DATE_AND_TIME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="ADDRESS">
+						<subreportParameterExpression><![CDATA[$P{ADDRESS}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NAME">
+						<subreportParameterExpression><![CDATA[$P{CUSTOMER_NAME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="EVENT_NAME">
+						<subreportParameterExpression><![CDATA[$P{NATURE_OF_EVENT}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="EVENT_DATE">
+						<subreportParameterExpression><![CDATA[$P{EVENT_DATE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TIME_FORMAT">
+						<subreportParameterExpression><![CDATA[$P{TIME_FORMAT}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CUSTOMER_NAME">
+						<subreportParameterExpression><![CDATA[$P{CUSTOMER_NAME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="NATURE_OF_EVENT">
+						<subreportParameterExpression><![CDATA[$P{NATURE_OF_EVENT}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="MOBILE_NO">
+						<subreportParameterExpression><![CDATA[$P{MOBILE_NO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TIME">
+						<subreportParameterExpression><![CDATA[$P{TIME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="DATE">
+						<subreportParameterExpression><![CDATA[$P{DATE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CUSTOMER_MOBILE_VALUE">
+						<subreportParameterExpression><![CDATA[$P{CUSTOMER_MOBILE_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TITLE">
+						<subreportParameterExpression><![CDATA[$P{TITLE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CHEF_NAME">
+						<subreportParameterExpression><![CDATA[$P{CHEF_NAME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CHEF_NAME_VALUE">
+						<subreportParameterExpression><![CDATA[$P{CHEF_NAME_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="COMPANY_NAME_VALUE">
+						<subreportParameterExpression><![CDATA[$P{COMPANY_NAME_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="LOGO">
+						<subreportParameterExpression><![CDATA[$P{LOGO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="COMPANY_ADDRESS_VALUE">
+						<subreportParameterExpression><![CDATA[$P{COMPANY_ADDRESS_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="COMPANY_MOBILE_NUMBER_VALUE">
+						<subreportParameterExpression><![CDATA[$P{COMPANY_MOBILE_NUMBER_VALUE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="MOBILE_NUMBER">
+						<subreportParameterExpression><![CDATA[$P{MOBILE_NUMBER}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="CHEF_LABOUR">
+						<subreportParameterExpression><![CDATA[$P{CHEF_LABOUR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="OUTSIDE_LABOUR">
+						<subreportParameterExpression><![CDATA[$P{OUTSIDE_LABOUR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="START_DATE">
+						<subreportParameterExpression><![CDATA[$P{START_DATE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="START_TIME">
+						<subreportParameterExpression><![CDATA[$P{START_TIME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="END_DATE">
+						<subreportParameterExpression><![CDATA[$P{END_DATE}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="END_TIME">
+						<subreportParameterExpression><![CDATA[$P{END_TIME}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter name="TO">
+						<subreportParameterExpression><![CDATA[$P{TO}]]></subreportParameterExpression>
+					</subreportParameter>
+					<dataSourceExpression><![CDATA[$P{SUB_REPORT_1_DATASOURCE}]]></dataSourceExpression>
+					<subreportExpression><![CDATA[$P{SUB_REPORT_1_PATH}]]></subreportExpression>
+				</subreport>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Final_Item_Category_And_Material"/>
+	<title>
+		<band height="266" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement positionType="Float" x="2" y="140" width="550" height="110" isRemoveLineWhenBlank="true" uuid="f4079b82-cf1c-47e7-bd36-a81a6e613a9d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="7" y="5" width="98" height="20" forecolor="#000000" uuid="349c3eef-b4c1-47c3-b997-3abee2c1a225">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.25" lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CUSTOMER_NAME}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement positionType="Float" x="113" y="5" width="206" height="20" forecolor="#000000" uuid="a0414542-1ba5-408b-9a36-5aa389543593">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CUSTOMER_NAME_VALUE}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="105" y="5" width="8" height="20" forecolor="#000000" uuid="2cdbf830-7676-47f7-b849-bc626d288eec">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" : "]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement x="410" y="25" width="134" height="20" forecolor="#000000" uuid="6816fefe-c191-4d88-b4e2-0583ad91e12f">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{EVENT_DATE_VALUE}.format(java.time.format.DateTimeFormatter.ofPattern($P{DATE_FORMAT}))]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="400" y="25" width="10" height="20" forecolor="#000000" uuid="e68cf061-2798-4b54-b9ea-efd4fcfb971a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" : "]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="319" y="25" width="81" height="20" forecolor="#000000" uuid="985087bd-d8ec-4b6a-af42-9034dc3ddf17">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{EVENT_DATE}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="7" y="25" width="98" height="20" forecolor="#000000" uuid="1fb7a471-9356-4c56-ac74-56759c481237">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{FUNCTION}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement x="113" y="25" width="206" height="20" forecolor="#000000" uuid="51483e5d-5829-4761-8b81-cd67f4575c34">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{EVENT_NAME_VALUE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="105" y="25" width="8" height="20" forecolor="#000000" uuid="f403f2f4-3802-4a4f-a287-e395f2072246">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" : "]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="319" y="5" width="81" height="20" forecolor="#000000" uuid="e1aeab50-f91c-4726-a916-463545d34524">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{MOBILE_NO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="400" y="5" width="10" height="20" forecolor="#000000" uuid="74f4ffef-afc0-4129-b1b1-3bcff7551d54">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" : "]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement x="410" y="5" width="134" height="20" forecolor="#000000" uuid="51572271-8641-41d9-a1ee-79c4eba6eca9">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CUSTOMER_MOBILE_VALUE}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="319" y="45" width="81" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="9cc1302c-d474-4e20-b596-33f45cd00b20">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<printWhenExpression><![CDATA[$P{CHEF_NAME_VALUE} != null && !$P{CHEF_NAME_VALUE}.trim().equals("")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.25" lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CHEF_NAME}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="400" y="45" width="10" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="6edc3270-4a99-4eb9-8b47-9ca93d52f1f3">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<printWhenExpression><![CDATA[$P{CHEF_NAME_VALUE} != null && !$P{CHEF_NAME_VALUE}.trim().equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" : "]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+					<reportElement x="410" y="45" width="134" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="3731930d-d6a9-4182-875b-48c835677668">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<printWhenExpression><![CDATA[$P{CHEF_NAME_VALUE} != null && !$P{CHEF_NAME_VALUE}.trim().equals("")]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Arial Unicode MS" size="12"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{CHEF_NAME_VALUE}]]></textFieldExpression>
+				</textField>
+				<frame>
+					<reportElement positionType="Float" x="7" y="85" width="537" height="20" isRemoveLineWhenBlank="true" uuid="4095ea08-7642-4394-8b1e-b613ee9c0104">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+						<reportElement positionType="Float" x="106" y="0" width="431" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="b9ddd65c-d37d-431e-988f-0938cec75493">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineColor="#000000"/>
+							<topPen lineWidth="0.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12"/>
+							<paragraph leftIndent="2"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{NOTES_VALUE} != null && !$P{NOTES_VALUE}.isEmpty()  ? $P{MEAL_TYPE_NAME_VALUE} + " (" + $P{NOTES_VALUE} +  ")" : $P{MEAL_TYPE_NAME_VALUE}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement positionType="Float" x="98" y="0" width="8" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="1e6feef1-ddea-4c66-bb22-ee10a9da0284">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<textElement verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{MEAL_TYPE} != null ? " : " : ""]]></textFieldExpression>
+					</textField>
+					<textField textAdjust="StretchHeight">
+						<reportElement positionType="Float" x="0" y="0" width="98" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="5af240c8-215a-4305-98f3-f683f4131852">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.25" lineColor="#000000"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12"/>
+							<paragraph leftIndent="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{MEAL_TYPE}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="7" y="45" width="312" height="20" isRemoveLineWhenBlank="true" uuid="10be9b0d-483f-4b82-b1e6-9ec686147734">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textField textAdjust="StretchHeight">
+						<reportElement positionType="Float" x="0" y="0" width="98" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="Final_Item_Category_And_Material" forecolor="#000000" uuid="497ff0f1-80f1-4d58-a284-4b2aae7f549b">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineColor="#000000"/>
+							<topPen lineWidth="0.0"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12"/>
+							<paragraph leftIndent="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{HALL_NAME_VALUE} != null && !$P{HALL_NAME_VALUE}.equalsIgnoreCase( " " ) ? $P{VENUE_NAME} : ""]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement positionType="Float" x="98" y="0" width="8" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="1c02228f-20c1-45dd-8a5d-06b7ec8010d0">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<textElement verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{HALL_NAME_VALUE} != null && !$P{HALL_NAME_VALUE}.equalsIgnoreCase( " " ) ?" : " : ""]]></textFieldExpression>
+					</textField>
+					<textField textAdjust="StretchHeight" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+						<reportElement positionType="Float" x="106" y="0" width="206" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="2f3645de-2d74-4035-9c27-20b011f2fa41">
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineColor="#000000"/>
+							<topPen lineWidth="0.0" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12"/>
+							<paragraph leftIndent="2"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{HALL_NAME_VALUE} != null && !$P{HALL_NAME_VALUE}.equalsIgnoreCase( " " ) ? $P{HALL_NAME_VALUE}: " "]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement positionType="Float" x="7" y="65" width="312" height="20" isRemoveLineWhenBlank="true" uuid="f40e9e3c-0044-48cc-9f18-1190ac541ff1">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+						<reportElement positionType="Float" x="106" y="0" width="206" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="2f2b9b2b-65f3-4c42-ab23-32ba9c265262">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.x" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineColor="#000000"/>
+							<topPen lineWidth="0.0" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12"/>
+							<paragraph leftIndent="2"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{VENUE_VALUE}!= null && !$P{VENUE_VALUE}.equalsIgnoreCase( " " ) ?$P{VENUE_VALUE} : ""]]></textFieldExpression>
+					</textField>
+					<textField textAdjust="StretchHeight">
+						<reportElement positionType="Float" x="0" y="0" width="98" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="71cea0ae-b604-4685-ad46-02a5ca587a29">
+							<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<box>
+							<pen lineWidth="1.25" lineColor="#000000"/>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12"/>
+							<paragraph leftIndent="0"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{FUNCTION_ADDRESS}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement positionType="Float" x="98" y="0" width="8" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="30a37d87-79eb-4af6-8e07-9326899f4473">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</reportElement>
+						<textElement verticalAlignment="Top">
+							<font fontName="Arial Unicode MS" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[" : "]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="3" y="110" width="548" height="30" uuid="845413db-0626-4ace-9043-0edbd030cdd7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITLE}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="0" y="100" width="555" height="3" uuid="55d4e564-823f-48cd-a85b-c94b6a2eb396"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="0" y="0" width="70" height="70" uuid="8c6c2b16-8815-4989-b15b-579a384df1f1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="467" y="8" width="86" height="20" forecolor="#000000" uuid="b98e64d8-5b46-4017-913c-4756c643b368">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="0.0" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial Unicode MS" size="12"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COMPANY_MOBILE_NUMBER_VALUE}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="449" y="12" width="10" height="10" uuid="384df944-9cde-4e44-8352-b9dc5d701fc0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{REPORT_CALL}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="449" y="49" width="10" height="10" uuid="f02f9a8f-6409-45da-93ce-e9e1e4392db8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{REPORT_WHATSAPP}]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="449" y="31" width="10" height="10" uuid="da1a792e-7270-4a5a-8ef3-b7b2609e5087">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{REPORT_CALL}]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="0" y="-20" width="554" height="20" uuid="823e7092-7ac9-4afd-a00c-c62e0088e662">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Unicode MS" size="10" isUnderline="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{LANG_CODE}.equals("en") ? "|| Shri Ganeshaaya Namah ||" :
+$P{LANG_CODE}.equals("hi") ? "|| श्री गणेशाय नमः ||" :
+$P{LANG_CODE}.equals("gu") ? "|| શ્રી ગણેશાય નમઃ || " : ""]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="350" y="7" width="98" height="20" uuid="a93f606d-3f77-4092-b141-7e06d0ee8545">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Unicode MS" size="10" isUnderline="false"/>
+					<paragraph leftIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{COMPANY_USER_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="467" y="28" width="86" height="18" uuid="d58f8574-5c9a-4c93-a19e-edf3478284c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<text><![CDATA[8511027949]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="46" width="86" height="18" uuid="1d1f50ff-e60b-41c8-903a-2466bbb5d8cf"/>
+				<textElement>
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<text><![CDATA[6352202239]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="0" y="80" width="555" height="20" uuid="8cdf5964-129d-407f-8b53-68e926ac82d9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="ShowOutOfBoundContent" value="true"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="20" y="0" width="535" height="20" uuid="2e5aa35c-36cd-4c9b-a336-7027ca8ea23c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS"/>
+						<paragraph leftIndent="2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{COMPANY_ADDRESS_VALUE}!= null && !$P{COMPANY_ADDRESS_VALUE}.equalsIgnoreCase( " " ) ? $P{COMPANY_ADDRESS_VALUE}: " ")]]></textFieldExpression>
+				</textField>
+				<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+					<reportElement positionType="Float" x="1" y="5" width="10" height="10" uuid="6381ddb5-43c2-429a-a4b1-e6824fbeef98">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{REPORT_ADDRESS}]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="105" y="3" width="205" height="30" uuid="9f2956bc-1da2-4df6-9966-e02adabfc06c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" x="0" y="0" width="205" height="30" uuid="16b99c59-6b34-446d-9abf-fbacb708d29c">
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					</reportElement>
+					<box leftPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS" size="20" isUnderline="false"/>
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{COMPANY_NAME_VALUE}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="80" y="37" width="350" height="34" uuid="f5feb554-95bf-45fa-ac22-c08e367418cd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="0" y="0" width="350" height="17" forecolor="#000000" uuid="41072803-ba29-4bcf-bc79-603d5be67f5c">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="0">
+						<pen lineWidth="0.0" lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS" size="10" isItalic="true" isUnderline="false"/>
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{LANG_CODE}.equals("en") ? "|| Catering services will be provided for the auspicious wedding ceremony ||" :
+$P{LANG_CODE}.equals("gu") ? "|| શુભ લગ્ન પ્રસંગે લેબર તથા ડીશ કોન્ટ્રાક્ટરથી ||" :
+$P{LANG_CODE}.equals("hi") ? "|| शुभ विवाह समारोह में श्रमिक और डिश ठेकेदार के माध्यम से ||" : ""]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="25" y="17" width="295" height="17" forecolor="#000000" uuid="da498535-a24b-4367-948a-9ffe09832599">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="0">
+						<pen lineWidth="0.0" lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS" size="10" isItalic="true" isUnderline="false"/>
+						<paragraph leftIndent="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{LANG_CODE}.equals("en") ? "|| through labor and dish contractors. ||" :
+ $P{LANG_CODE}.equals("gu") ? "|| કેટરીંગનું કામ કરી આપવામાં આવશે. ||" :
+ $P{LANG_CODE}.equals("hi") ? "|| कैटरिंग की सेवा प्रदान की जाएगी। ||" : "")]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="22">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="195" y="4" width="103" height="18" uuid="cf8d93db-61a4-4251-9397-63c79f2b2775"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PAGE}+ " "+$V{PAGE_NUMBER}+ " "+$P{OF}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="298" y="4" width="21" height="18" uuid="1e42ddb9-0487-4c7b-8f34-53c80629d0b7"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="3" width="59" height="18" forecolor="#000000" uuid="47a81bec-ea8e-485b-b9d3-e31fc0f3396b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#0F228A"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Arial Unicode MS" size="12"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SIGN}+":"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="76" y="3" width="89" height="18" uuid="3b09a811-9d27-40a7-bed6-e3cc12fd246e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<text><![CDATA[__________________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="408" y="4" width="127" height="18" uuid="29b16232-562e-441a-84de-d46d0d1eaafc"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[java.time.format.DateTimeFormatter.ofPattern($P{DATE_TIME_FORMAT}, Locale.ENGLISH).format(java.time.LocalDateTime.now().atZone(java.time.ZoneId.systemDefault()).withZoneSameInstant(java.time.ZoneId.of($P{TIME_ZONE})).toLocalDateTime())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

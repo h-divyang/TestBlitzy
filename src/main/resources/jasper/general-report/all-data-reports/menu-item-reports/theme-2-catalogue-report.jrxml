@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="theme-2-catalogue-report" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fbdbd158-c46e-488f-b635-27a2b4e10350">
+	<parameter name="LOGO" class="java.lang.String"/>
+	<parameter name="COMPANY_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_ADDRESS_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_EMAIL_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_MOBILE_NUMBER_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_OFFICE_NUMBER" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TERMS_AND_CONDITIONS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SIGN" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PAGE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="OF" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_1_PATH" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_1_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="menuItem" class="java.lang.String"/>
+	<field name="menuItemCategory" class="java.lang.String"/>
+	<field name="date" class="java.time.LocalDateTime"/>
+	<field name="functionName" class="java.lang.String"/>
+	<field name="person" class="java.lang.Long"/>
+	<field name="functionId" class="java.lang.Long"/>
+	<field name="rate" class="java.lang.Double"/>
+	<field name="functionNote" class="java.lang.String"/>
+	<variable name="COUNT" class="java.lang.Integer" resetType="Group" resetGroup="Function">
+		<variableExpression><![CDATA[$V{COUNT} + 1]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<variable name="TOTAL" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{person}*$F{rate}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<group name="Group1" footerPosition="ForceAtBottom">
+		<groupHeader>
+			<band height="842">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<image scaleImage="FillFrame">
+					<reportElement x="0" y="0" width="595" height="842" uuid="2f5d6766-dbc6-453a-b8ae-146ec78e1fca">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA["https://jucas.s3.ap-south-1.amazonaws.com/dev/report/catalogue-theme/theme-2-first-page"]]></imageExpression>
+				</image>
+				<image scaleImage="RetainShape" hAlign="Center" onErrorType="Blank">
+					<reportElement x="230" y="86" width="130" height="110" isRemoveLineWhenBlank="true" uuid="0729917e-21de-496e-b7cd-56916a7cba7a">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+				</image>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="120" y="221" width="350" height="30" forecolor="#400308" uuid="b2e2a865-8953-45d8-b14b-30576fb5c1bc"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS" size="20" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{COMPANY_NAME_VALUE}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="120" y="400" width="350" height="15" forecolor="#400308" uuid="a2acddd8-c3e8-434f-9c16-c88c4801d0c9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{COMPANY_ADDRESS_VALUE}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement x="191" y="359" width="219" height="20" forecolor="#400308" uuid="eb7b7c18-18c1-40ff-a193-bc6bc05cb3b9">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="0" rightPadding="4"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial Unicode MS" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{COMPANY_MOBILE_NUMBER_VALUE}]]></textFieldExpression>
+				</textField>
+				<image scaleImage="RetainShape" hAlign="Center" onErrorType="Blank">
+					<reportElement x="290" y="385" width="12" height="12" isRemoveLineWhenBlank="true" uuid="7f60aa27-494b-4509-bf84-61ee604b13d9">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA["https://jucas.s3.ap-south-1.amazonaws.com/dev/report/catalogue-theme/theme-2-location"]]></imageExpression>
+				</image>
+				<image scaleImage="RetainShape" hAlign="Center" onErrorType="Blank">
+					<reportElement x="290" y="345" width="12" height="12" isRemoveLineWhenBlank="true" uuid="7949c70a-559b-400a-835d-38ec0661b4ba">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA["https://jucas.s3.ap-south-1.amazonaws.com/dev/report/catalogue-theme/theme-2-call"]]></imageExpression>
+				</image>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Function" footerPosition="StackAtBottom">
+		<groupExpression><![CDATA[$F{functionId}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="1" y="0" width="588" height="20" uuid="a9b0b0e1-8b86-4e4c-aac8-9e07ecaf2ac0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<subreportParameter name="LOGO">
+					<subreportParameterExpression><![CDATA[$P{LOGO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_ADDRESS_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_ADDRESS_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_EMAIL_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_EMAIL_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_MOBILE_NUMBER_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_MOBILE_NUMBER_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_OFFICE_NUMBER">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_OFFICE_NUMBER}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SIGN">
+					<subreportParameterExpression><![CDATA[$P{SIGN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PAGE">
+					<subreportParameterExpression><![CDATA[$P{PAGE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OF">
+					<subreportParameterExpression><![CDATA[$P{OF}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_1_PATH">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_1_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{SUB_REPORT_1_DATASOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUB_REPORT_1_PATH}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="842">
+			<printWhenExpression><![CDATA[$P{TERMS_AND_CONDITIONS} !="" && !$P{TERMS_AND_CONDITIONS}.isEmpty() && $P{TERMS_AND_CONDITIONS}!= null]]></printWhenExpression>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="595" height="842" uuid="42c3045c-3e9d-4000-a798-0670dd4e3d1b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["https://jucas.s3.ap-south-1.amazonaws.com/dev/report/catalogue-theme/theme-2-last-page"]]></imageExpression>
+			</image>
+			<textField textAdjust="ScaleFont" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="20" width="401" height="679" isRemoveLineWhenBlank="true" uuid="35f5a599-9f2d-4b53-a4da-acd8b3faa59e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box padding="0"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Arial Unicode MS" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TERMS_AND_CONDITIONS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

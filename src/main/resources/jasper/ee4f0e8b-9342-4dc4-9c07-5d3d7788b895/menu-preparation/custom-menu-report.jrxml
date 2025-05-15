@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="simple-menu-sub-report" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" uuid="fbdbd158-c46e-488f-b635-27a2b4e10350">
+	<parameter name="CUSTOMER_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MOBILE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="VENUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PERSON" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOGO" class="java.lang.String"/>
+	<parameter name="TITLE" class="java.lang.String"/>
+	<parameter name="CUSTOMER_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="VENUE_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MEETING_DATE" class="java.lang.String"/>
+	<parameter name="MEETING_DATE_VALUE" class="java.time.LocalDate" isForPrompting="false"/>
+	<parameter name="EVENT_DATE_VALUE" class="java.time.LocalDate" isForPrompting="false"/>
+	<parameter name="CUSTOMER_NUMBER_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TIME_ZONE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE" class="java.lang.String"/>
+	<parameter name="TIME" class="java.lang.String"/>
+	<parameter name="TIME_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_ADDRESS_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_EMAIL_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_MOBILE_NUMBER_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="COMPANY_OFFICE_NUMBER" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="ORDER_DATE" class="java.lang.String"/>
+	<parameter name="ORDER_NOTES" class="java.lang.String"/>
+	<parameter name="TERMS_AND_CONDITIONS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="RUPEES_SYMBOL" class="java.lang.String"/>
+	<parameter name="SUB_REPORT_3_PATH" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_3_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="TERMS_AND_CONDITIONS_WIDTH" class="java.lang.String"/>
+	<parameter name="TERMS_AND_CONDITIONS_HEIGHT" class="java.lang.String"/>
+	<parameter name="TERMS_AND_CONDITIONS_0" class="java.lang.String"/>
+	<parameter name="TERMS_AND_CONDITIONS_1" class="java.lang.String"/>
+	<parameter name="EVENT_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="EVENT_DATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MOBILE_NO" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FUNCTION" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="RATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SIGN" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="PAGE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="OF" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="EVENT_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DECIMAL_LIMIT_FOR_CURRENCY" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="DATE_TIME_FORMAT" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="START_DATE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="FUNCTION_ADDRESS" class="java.lang.String"/>
+	<parameter name="FUNCTION_NOTE" class="java.lang.String"/>
+	<parameter name="BACKGROUND_FRAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BACKGROUND_IMAGE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BACKGROUND_LAST_IMAGE" class="java.lang.String"/>
+	<parameter name="EXCLUSIVE_DESIGN" class="java.lang.String"/>
+	<parameter name="MEAL_TYPE_NAME_VALUE" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MEAL_TYPE_LABEL" class="java.lang.String"/>
+	<parameter name="NOTES_VALUE" class="java.lang.String"/>
+	<parameter name="EXTRA" class="java.lang.String"/>
+	<parameter name="SUB_REPORT_1_DATASOURCE" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource" isForPrompting="false"/>
+	<parameter name="SUB_REPORT_1_PATH" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="TIMING_AND_GUEST_DETAILS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="TO" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="menuItem" class="java.lang.String"/>
+	<field name="menuItemCategory" class="java.lang.String"/>
+	<field name="date" class="java.time.LocalDateTime"/>
+	<field name="functionName" class="java.lang.String"/>
+	<field name="person" class="java.lang.Long"/>
+	<field name="functionId" class="java.lang.Long"/>
+	<field name="rate" class="java.lang.Double"/>
+	<field name="functionNote" class="java.lang.String"/>
+	<title>
+		<band height="842">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="595" height="842" uuid="17f96de1-55d1-4892-94c1-d4d4aa65dc5a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($P{ORDER_NOTES} != null && $P{ORDER_NOTES} != "") || $P{TERMS_AND_CONDITIONS} != null]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{BACKGROUND_IMAGE}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="20">
+			<subreport>
+				<reportElement x="0" y="0" width="595" height="20" uuid="472044d9-63bd-45f4-ab05-71b0c0bb168d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<subreportParameter name="CUSTOMER_NAME">
+					<subreportParameterExpression><![CDATA[$P{CUSTOMER_NAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MOBILE">
+					<subreportParameterExpression><![CDATA[$P{MOBILE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VENUE">
+					<subreportParameterExpression><![CDATA[$P{VENUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PERSON">
+					<subreportParameterExpression><![CDATA[$P{PERSON}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LOGO">
+					<subreportParameterExpression><![CDATA[$P{LOGO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TITLE">
+					<subreportParameterExpression><![CDATA[$P{TITLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CUSTOMER_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{CUSTOMER_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VENUE_VALUE">
+					<subreportParameterExpression><![CDATA[$P{VENUE_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEETING_DATE">
+					<subreportParameterExpression><![CDATA[$P{MEETING_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEETING_DATE_VALUE">
+					<subreportParameterExpression><![CDATA[$P{MEETING_DATE_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVENT_DATE_VALUE">
+					<subreportParameterExpression><![CDATA[$P{EVENT_DATE_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CUSTOMER_NUMBER_VALUE">
+					<subreportParameterExpression><![CDATA[$P{CUSTOMER_NUMBER_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATE_FORMAT">
+					<subreportParameterExpression><![CDATA[$P{DATE_FORMAT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIME_ZONE">
+					<subreportParameterExpression><![CDATA[$P{TIME_ZONE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATE">
+					<subreportParameterExpression><![CDATA[$P{DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIME">
+					<subreportParameterExpression><![CDATA[$P{TIME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIME_FORMAT">
+					<subreportParameterExpression><![CDATA[$P{TIME_FORMAT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_ADDRESS_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_ADDRESS_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_EMAIL_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_EMAIL_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_MOBILE_NUMBER_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_MOBILE_NUMBER_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_OFFICE_NUMBER">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_OFFICE_NUMBER}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ORDER_DATE">
+					<subreportParameterExpression><![CDATA[$P{ORDER_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ORDER_NOTES">
+					<subreportParameterExpression><![CDATA[$P{ORDER_NOTES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RUPEES_SYMBOL">
+					<subreportParameterExpression><![CDATA[$P{RUPEES_SYMBOL}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_3_PATH">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_3_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_3_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_3_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_WIDTH">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_WIDTH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_HEIGHT">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_HEIGHT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_0">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_0}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_1">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVENT_NAME">
+					<subreportParameterExpression><![CDATA[$P{EVENT_NAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVENT_DATE">
+					<subreportParameterExpression><![CDATA[$P{EVENT_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MOBILE_NO">
+					<subreportParameterExpression><![CDATA[$P{MOBILE_NO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FUNCTION">
+					<subreportParameterExpression><![CDATA[$P{FUNCTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RATE">
+					<subreportParameterExpression><![CDATA[$P{RATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SIGN">
+					<subreportParameterExpression><![CDATA[$P{SIGN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PAGE">
+					<subreportParameterExpression><![CDATA[$P{PAGE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OF">
+					<subreportParameterExpression><![CDATA[$P{OF}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVENT_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{EVENT_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DECIMAL_LIMIT_FOR_CURRENCY">
+					<subreportParameterExpression><![CDATA[$P{DECIMAL_LIMIT_FOR_CURRENCY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATE_TIME_FORMAT">
+					<subreportParameterExpression><![CDATA[$P{DATE_TIME_FORMAT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="START_DATE">
+					<subreportParameterExpression><![CDATA[$P{START_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FUNCTION_ADDRESS">
+					<subreportParameterExpression><![CDATA[$P{FUNCTION_ADDRESS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FUNCTION_NOTE">
+					<subreportParameterExpression><![CDATA[$P{FUNCTION_NOTE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BACKGROUND_FRAME">
+					<subreportParameterExpression><![CDATA[$P{BACKGROUND_FRAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BACKGROUND_IMAGE">
+					<subreportParameterExpression><![CDATA[$P{BACKGROUND_IMAGE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BACKGROUND_LAST_IMAGE">
+					<subreportParameterExpression><![CDATA[$P{BACKGROUND_LAST_IMAGE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EXCLUSIVE_DESIGN">
+					<subreportParameterExpression><![CDATA[$P{EXCLUSIVE_DESIGN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEAL_TYPE_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{MEAL_TYPE_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEAL_TYPE_LABEL">
+					<subreportParameterExpression><![CDATA[$P{MEAL_TYPE_LABEL}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="NOTES_VALUE">
+					<subreportParameterExpression><![CDATA[$P{NOTES_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EXTRA">
+					<subreportParameterExpression><![CDATA[$P{EXTRA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_1_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_1_PATH">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIMING_AND_GUEST_DETAILS">
+					<subreportParameterExpression><![CDATA[$P{TIMING_AND_GUEST_DETAILS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TO">
+					<subreportParameterExpression><![CDATA[$P{TO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{SUB_REPORT_1_DATASOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUB_REPORT_1_PATH}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="20">
+			<subreport>
+				<reportElement x="1" y="0" width="588" height="20" uuid="a9b0b0e1-8b86-4e4c-aac8-9e07ecaf2ac0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<subreportParameter name="EVENT_DATE">
+					<subreportParameterExpression><![CDATA[$P{EVENT_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CUSTOMER_NAME">
+					<subreportParameterExpression><![CDATA[$P{CUSTOMER_NAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MOBILE">
+					<subreportParameterExpression><![CDATA[$P{MOBILE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VENUE">
+					<subreportParameterExpression><![CDATA[$P{VENUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FUNCTION_NAME">
+					<subreportParameterExpression><![CDATA[$P{FUNCTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PERSON">
+					<subreportParameterExpression><![CDATA[$P{PERSON}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="START_DATE">
+					<subreportParameterExpression><![CDATA[$P{START_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVENT_NAME">
+					<subreportParameterExpression><![CDATA[$P{EVENT_NAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RATE">
+					<subreportParameterExpression><![CDATA[$P{RATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="LOGO">
+					<subreportParameterExpression><![CDATA[$P{LOGO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SIGN">
+					<subreportParameterExpression><![CDATA[$P{SIGN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="PAGE">
+					<subreportParameterExpression><![CDATA[$P{PAGE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="OF">
+					<subreportParameterExpression><![CDATA[$P{OF}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TITLE">
+					<subreportParameterExpression><![CDATA[$P{TITLE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVENT_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{EVENT_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CUSTOMER_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{CUSTOMER_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="VENUE_VALUE">
+					<subreportParameterExpression><![CDATA[$P{VENUE_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EVENT_DATE_VALUE">
+					<subreportParameterExpression><![CDATA[$P{EVENT_DATE_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="CUSTOMER_NUMBER_VALUE">
+					<subreportParameterExpression><![CDATA[$P{CUSTOMER_NUMBER_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DECIMAL_LIMIT_FOR_CURRENCY">
+					<subreportParameterExpression><![CDATA[$P{DECIMAL_LIMIT_FOR_CURRENCY}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATE_FORMAT">
+					<subreportParameterExpression><![CDATA[$P{DATE_FORMAT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATE_TIME_FORMAT">
+					<subreportParameterExpression><![CDATA[$P{DATE_TIME_FORMAT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIME_ZONE">
+					<subreportParameterExpression><![CDATA[$P{TIME_ZONE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DATE">
+					<subreportParameterExpression><![CDATA[$P{DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIME">
+					<subreportParameterExpression><![CDATA[$P{TIME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIME_FORMAT">
+					<subreportParameterExpression><![CDATA[$P{TIME_FORMAT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BACKGROUND_FRAME">
+					<subreportParameterExpression><![CDATA[$P{BACKGROUND_FRAME}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BACKGROUND_IMAGE">
+					<subreportParameterExpression><![CDATA[$P{BACKGROUND_IMAGE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FUNCTION">
+					<subreportParameterExpression><![CDATA[$P{FUNCTION}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RUPEES_SYMBOL">
+					<subreportParameterExpression><![CDATA[$P{RUPEES_SYMBOL}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEETING_DATE">
+					<subreportParameterExpression><![CDATA[$P{MEETING_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEETING_DATE_VALUE">
+					<subreportParameterExpression><![CDATA[$P{MEETING_DATE_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_ADDRESS_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_ADDRESS_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_EMAIL_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_EMAIL_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_MOBILE_NUMBER_VALUE">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_MOBILE_NUMBER_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="COMPANY_OFFICE_NUMBER">
+					<subreportParameterExpression><![CDATA[$P{COMPANY_OFFICE_NUMBER}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ORDER_DATE">
+					<subreportParameterExpression><![CDATA[$P{ORDER_DATE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="ORDER_NOTES">
+					<subreportParameterExpression><![CDATA[$P{ORDER_NOTES}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_3_PATH">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_3_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_3_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_3_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_WIDTH">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_WIDTH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_HEIGHT">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_HEIGHT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_0">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_0}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TERMS_AND_CONDITIONS_1">
+					<subreportParameterExpression><![CDATA[$P{TERMS_AND_CONDITIONS_1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MOBILE_NO">
+					<subreportParameterExpression><![CDATA[$P{MOBILE_NO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FUNCTION_ADDRESS">
+					<subreportParameterExpression><![CDATA[$P{FUNCTION_ADDRESS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="FUNCTION_NOTE">
+					<subreportParameterExpression><![CDATA[$P{FUNCTION_NOTE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="BACKGROUND_LAST_IMAGE">
+					<subreportParameterExpression><![CDATA[$P{BACKGROUND_LAST_IMAGE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EXCLUSIVE_DESIGN">
+					<subreportParameterExpression><![CDATA[$P{EXCLUSIVE_DESIGN}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEAL_TYPE_NAME_VALUE">
+					<subreportParameterExpression><![CDATA[$P{MEAL_TYPE_NAME_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MEAL_TYPE_LABEL">
+					<subreportParameterExpression><![CDATA[$P{MEAL_TYPE_LABEL}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="NOTES_VALUE">
+					<subreportParameterExpression><![CDATA[$P{NOTES_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EXTRA">
+					<subreportParameterExpression><![CDATA[$P{EXTRA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_1_DATASOURCE">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_DATASOURCE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUB_REPORT_1_PATH">
+					<subreportParameterExpression><![CDATA[$P{SUB_REPORT_1_PATH}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TIMING_AND_GUEST_DETAILS">
+					<subreportParameterExpression><![CDATA[$P{TIMING_AND_GUEST_DETAILS}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TO">
+					<subreportParameterExpression><![CDATA[$P{TO}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{SUB_REPORT_3_DATASOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUB_REPORT_3_PATH}]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

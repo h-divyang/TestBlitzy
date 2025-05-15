@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="custom_menu_terms_and_conditions_sub_report" pageWidth="642" pageHeight="1008" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e2c6e7d1-16a1-4698-bafa-902afbe56f09">
+	<parameter name="ORDER_NOTES" class="java.lang.String"/>
+	<parameter name="TERMS_AND_CONDITIONS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="BACKGROUND_IMAGE" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<pageHeader>
+		<band height="180" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[($P{ORDER_NOTES} != null && $P{ORDER_NOTES} != "") || $P{TERMS_AND_CONDITIONS} != null]]></printWhenExpression>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="76" splitType="Stretch">
+			<printWhenExpression><![CDATA[($P{ORDER_NOTES} != null && $P{ORDER_NOTES} != "") || $P{TERMS_AND_CONDITIONS} != null]]></printWhenExpression>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Transparent" x="10" y="40" width="620" height="36" isRemoveLineWhenBlank="true" uuid="c0da563c-7534-4787-bdcd-9f4807755011">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box padding="0"/>
+				<textElement textAlignment="Left" markup="html">
+					<font fontName="Arial Unicode MS" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TERMS_AND_CONDITIONS}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement positionType="Float" mode="Transparent" x="10" y="0" width="620" height="36" isRemoveLineWhenBlank="true" uuid="52e66845-949a-42c9-a839-e428ed1afce2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box padding="0"/>
+				<textElement textAlignment="Left" markup="html">
+					<font fontName="Arial Unicode MS" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ORDER_NOTES}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="120" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[($P{ORDER_NOTES} != null && $P{ORDER_NOTES} != "") || $P{TERMS_AND_CONDITIONS} != null]]></printWhenExpression>
+		</band>
+	</pageFooter>
+</jasperReport>

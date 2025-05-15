@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="name-plate-report" columnCount="2" printOrder="Horizontal" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="282" columnSpacing="10" leftMargin="10" rightMargin="10" topMargin="36" bottomMargin="36" whenResourceMissingType="Empty" uuid="af07d40e-b1f2-4a7a-b9b8-29d4fea5bbe7">
+	<property name="ireport.zoom" value="1.4641000000000126"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.unit." value="mm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="mm"/>
+	<queryString>
+		<![CDATA[SELECT m.event_no, name_plate AS fn_item_name, cm.cmp_name AS cmp_name, th.theme_name, ac.ac_name FROM mnunameplate m LEFT JOIN vikram_7_cmp.company_mst cm ON cm.id=1 LEFT JOIN event_inq_mst eim ON eim.event_no = m.event_no LEFT JOIN event_con_mst ecm ON ecm.event_no = eim.event_no LEFT JOIN thememst th ON th.theme_cd = ecm.theme_cd LEFT JOIN acntmst ac ON ac.ac_cd = eim.customer_id LEFT JOIN generator_64k i  ON i.n BETWEEN 1 AND m.no_of_print WHERE m.event_no='K170003' AND name_plate != ''  AND m.event_function_id = '3' ORDER BY m.mnunameplate_id]]>
+	</queryString>
+	<field name="menuItemName" class="java.lang.String"/>
+	<detail>
+		<band height="96" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="0" width="282" height="96" forecolor="#FF0825" uuid="acce009a-fb7b-4a88-a025-5d86d6e46bb7">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box leftPadding="5" rightPadding="5">
+					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Unicode MS" size="24" isBold="true"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{menuItemName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
